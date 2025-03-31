@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AzureControllers {
 
-    @GetMapping("/user")
-    public String getUserDetails(@RequestParam(value = "id", required = false) String userId) {
+    @GetMapping("/keyrun")
+    public String getUserDetails() {
         // For demonstration purposes, returning a static response
-        return "User details for user id: " + userId;
+        return "I have developed a Spring Boot application from the ground up, utilizing GitHub Actions for deployment to Azure.";
     }
 }
 
