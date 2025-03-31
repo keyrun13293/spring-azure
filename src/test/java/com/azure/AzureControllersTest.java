@@ -1,4 +1,5 @@
 package com.azure;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -17,16 +18,9 @@ public class AzureControllersTest {
     private MockMvc mockMvc;
 
     @Test
-    public void testGetUserDetailsWithId() throws Exception {
-        mockMvc.perform(get("/user").param("id", "123"))
+    public void testGetUserDetails() throws Exception {
+        mockMvc.perform(get("/keyrun"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("User details for user id: 123"));
-    }
-
-    @Test
-    public void testGetUserDetailsWithoutId() throws Exception {
-        mockMvc.perform(get("/user"))
-                .andExpect(status().isOk())
-                .andExpect(content().string("User details for user id: null"));
+                .andExpect(content().string("I have developed a Spring Boot application from the ground up, utilizing GitHub Actions for deployment to Azure."));
     }
 }
