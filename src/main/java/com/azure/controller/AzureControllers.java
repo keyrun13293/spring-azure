@@ -9,7 +9,7 @@ public class AzureControllers {
     @GetMapping("/keyrun")
     public String getUserDetails() {
         // For demonstration purposes, returning a static response
-        return "I have developed a Spring Boot application from the ground up, utilizing GitHub Actions for deployment to Azure.";
+        return "This is my new app Nutan";
     }
 }
 
