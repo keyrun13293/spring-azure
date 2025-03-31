@@ -21,6 +21,6 @@ public class AzureControllersTest {
     public void testGetUserDetails() throws Exception {
         mockMvc.perform(get("/keyrun"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("I have developed a Spring Boot application from the ground up, utilizing GitHub Actions for deployment to Azure."));
+                .andExpect(content().string("This is my new app Nutan"));
     }
 }
